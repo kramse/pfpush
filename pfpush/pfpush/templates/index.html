@@ -2,7 +2,20 @@
 
 {% block title %} forside {% endblock title %}
 
-{% block body %} I am the body {% endblock body %}
+{% block navbar %} PF Pusher {% endblock navbar %}
 
+{% block body %} I am the body 
+
+Body
+
+{% endblock body %}
+
+{% block loggedin %} 
 
 {% if user.is_authenticated %}
+Du er logget ind som {{request.user}}!
+{% else %}
+Du er sgu da ikke logget ind!
+{% endif %}
+
+{% endblock loggedin %}

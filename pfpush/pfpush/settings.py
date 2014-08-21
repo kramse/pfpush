@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'allauth',
     'allauth.account',
-#    'allauth.socialaccount',
+    'allauth.socialaccount',
 #    'allauth.socialaccount.providers.github',
 #    'allauth.socialaccount.providers.twitter',
 )
@@ -64,7 +64,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
 "django.core.context_processors.request",
 # allauth specific context processors
 "allauth.account.context_processors.account",
-#"allauth.socialaccount.context_processors.socialaccount",
+"allauth.socialaccount.context_processors.socialaccount",
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -110,7 +110,11 @@ SITE_ID = 1
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIR = (os.path.join(BASE_DIR, '/templates') )
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'pfpush/templates') )
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "pfpush/static"),
+#    '/var/www/static/',
+)
 
 EMAIL_HOST = 'mail.kramse.org'
