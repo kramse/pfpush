@@ -64,7 +64,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
 "django.core.context_processors.request",
 # allauth specific context processors
 "allauth.account.context_processors.account",
-"allauth.socialaccount.context_processors.socialaccount",
+#"allauth.socialaccount.context_processors.socialaccount",
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -109,3 +109,8 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_DIR = (os.path.join(BASE_DIR, '/templates') )
+
+
+EMAIL_HOST = 'mail.kramse.org'
